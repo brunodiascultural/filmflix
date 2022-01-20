@@ -1,12 +1,11 @@
-import { MaterialModule } from './../shared/material/material.modules';
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
+import { MaterialModule } from './../shared/material/material.modules';
 import { AuthRoutingModule } from './auth-routing.module';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
-import { FormsModule } from '@angular/forms';
-
 
 @NgModule({
   declarations: [
@@ -20,4 +19,4 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
   ]
 })
-export class AuthModule { }
+export class AuthModule {}

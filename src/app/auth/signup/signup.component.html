@@ -1,6 +1,6 @@
-<form #signup="ngForm">
+<form #signup="ngForm" (ngSubmit)="onSubmit()">
   <p>
-    <mat-form-field appearance="standard">
+    <mat-form-field appearance="fill">
       <mat-label>Nome de usuário</mat-label>
       <input matInput placeholder="Placeholder" required name="username" ngModel/>
       <mat-icon matSuffix>person</mat-icon>
@@ -8,7 +8,7 @@
   </p>
 
   <p>
-    <mat-form-field appearance="standard">
+    <mat-form-field appearance="fill">
       <mat-label>Email</mat-label>
       <input matInput type="email" placeholder="Placeholder" required name="email" ngModel/>
       <mat-icon matSuffix>email</mat-icon>
@@ -25,22 +25,21 @@
         ngModel
         required
       />
-      <mat-datepicker-toggle matSuffix [for]="picker">
-      </mat-datepicker-toggle>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
   </p>
 
   <p>
-    <mat-form-field appearance="standard">
+    <mat-form-field appearance="fill">
       <mat-label>Senha</mat-label>
-      <input matInput type="password" placeholder="Placeholder" required name="password"/>
+      <input matInput type="password" placeholder="Placeholder" required name="password" ngModel/>
       <mat-icon matSuffix>lock</mat-icon>
     </mat-form-field>
   </p>
 
   <p>
-    <mat-form-field appearance="standard">
+    <mat-form-field appearance="fill">
       <mat-label>Confirmar Senha</mat-label>
       <input matInput type="password" placeholder="Placeholder" required name="confirm_password" ngModel/>
       <mat-icon matSuffix>lock</mat-icon>

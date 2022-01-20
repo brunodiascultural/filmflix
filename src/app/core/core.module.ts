@@ -1,5 +1,8 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+
+import { MaterialModule } from './../shared/material/material.modules';
 import { HeaderComponent } from './components/header/header.component';
 
 
@@ -9,7 +12,9 @@ import { HeaderComponent } from './components/header/header.component';
     HeaderComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MaterialModule,
+    RouterModule,
   ],
   exports: [HeaderComponent
   ]
