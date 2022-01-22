@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
-
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/core/services/auth/auth.service';
 
 @Component({
@@ -17,7 +17,10 @@ export class LoginComponent implements OnInit {
     const password = this.loginForm.value.password as string;
 
     this.authService.login(email, password).subscribe({
-      next: (creds) => { }, // TODO: Ir para home quando logar
+      next: (creds) => {
+        // TODO: Ir para home quando logar
+        console.log('ok');
+      },
       error: (err) => {
         let message = 'Ocorreu um erro';
 
@@ -40,7 +43,8 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private authService: AuthService,
-    private snackBar: MatSnackBar
+    private snackBar: MatSnackBar,
+    private router: Router
   ) { }
 
   ngOnInit(): void { }

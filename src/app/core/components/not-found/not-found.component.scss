@@ -1,0 +1,16 @@
+div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  height: calc(100% - 56px);
+
+  .not-found {
+    color: red;
+    font-weight: 600;
+    font-size: 95px;
+    margin-bottom: 30px;
+    animation: not-found-animation 2s infinite;
+  }
+}
