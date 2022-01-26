@@ -3,7 +3,9 @@ import { canActivate, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './home.component';
+import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 import { ProfileComponent } from './profile/profile.component';
+import { TvDetailComponent } from './tv-detail/tv-detail.component';
 
 const redirectUnauthorizedToLogin = () =>
   redirectUnauthorizedTo(['/auth/login']);
@@ -18,6 +20,16 @@ const routes: Routes = [
     path: 'perfil',
     component: ProfileComponent,
     ...canActivate(redirectUnauthorizedToLogin),
+  },
+
+  {//Criação detalhes do filme
+    path: 'movie/:id',
+    component: MovieDetailComponent,
+  },
+
+  {//Criação detalhes das séries
+    path: 'tv/:id',
+    component: TvDetailComponent,
   },
 ];
 

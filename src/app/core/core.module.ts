@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 import { MaterialModule } from './../shared/material/material.modules';
 import { HeaderComponent } from './components/header/header.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
-
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -17,6 +17,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     CommonModule,
     MaterialModule,
     RouterModule,
+    HttpClientModule
   ],
   exports: [HeaderComponent
   ]
